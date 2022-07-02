@@ -9,7 +9,7 @@ public class Util {
     private static final String user = "root";
     private static final String password = "root";
 
-    public Connection connection() {
+    public static Connection connection() {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(url, user, password);
