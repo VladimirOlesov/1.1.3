@@ -9,6 +9,7 @@ public class Util {
     private static final String user = "root";
     private static final String password = "root";
 
+
     public static Connection connection() {
         Connection connection = null;
         try {
@@ -16,5 +17,12 @@ public class Util {
         } catch (SQLException ignored) {
         }
         return connection;
+    }
+
+    public static void close() {
+        try {
+            connection().close();
+        } catch (SQLException ignored) {
+        }
     }
 }
